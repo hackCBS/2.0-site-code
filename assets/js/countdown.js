@@ -17,7 +17,7 @@ let countDown = new Date('Oct 19, 2019 00:00:00').getTime(),
     //   do something later when date is reached
       if (distance < 0) {
        clearInterval(x);
-       'ITS MY BIRTHDAY!';
+       'ITS THE DAY!';
       }
 
     }, second)
@@ -26,10 +26,18 @@ let countDown = new Date('Oct 19, 2019 00:00:00').getTime(),
     function daytonight() {
       if ($("#fullpage").hasClass("night")) {
         $("#fullpage").removeClass("night");
+        $("svg").css("fill", "black");
+        $(".timer-div").css("color", "black");
+        $(".timer-div-2").css("color", "black");
+        $(".tagline-head").css("color", "black");
         // /$("#switch").removeClass("switched");
       }
       else {
         $("#fullpage").addClass("night");
+        $("svg").css("fill", "white");
+        $(".timer-div").css("color", "white");
+        $(".timer-div-2").css("color", "white");
+        $(".tagline-head").css("color", "white");
         // $("#switch").addClass("switched");
     
       }
